@@ -53,9 +53,9 @@ class CloudDownloader(Viewer):
 
         return str(sanitised_directory)
 
-    def _download_google_file(self, gdrive_url: str, output_dir: str):
+    def _download_google_file(self, gdrive_url: str):
         try:
-            gdown.download(url=gdrive_url, output=output_dir, fuzzy=True)
+            gdown.download(url=gdrive_url, output=self.download_directory, fuzzy=True)
         except FileURLRetrievalError:
             self.display_error("Failed to retrieve file url: Cannot retrieve the public link of the file.\nYou may need to change the permission to 'Anyone with the link', or have had many accesses.")
             return
