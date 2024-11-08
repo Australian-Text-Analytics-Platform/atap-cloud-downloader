@@ -77,6 +77,7 @@ class CloudDownloader(Viewer):
             if file_url.startswith(url_prefix):
                 download_method: Callable = self.url_prefix_map[url_prefix]
                 download_method(file_url)
+                self.text_field.value = ''
                 return
 
         self.display_error("File share URL doesn't match any supported file share hosts")
