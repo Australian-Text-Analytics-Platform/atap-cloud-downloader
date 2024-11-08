@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "atap-cloud-downloader"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple Panel GUI for downloading files from cloud file hosting platforms to the local working space"
 authors = ["Hamish Croser <hamish.croser@sydney.edu.au>"]
 readme = "README.md"
